@@ -6,6 +6,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
 
     img{
         height: 100vh;
@@ -27,6 +28,14 @@
         &:hover{
             filter: brightness(1.25);
             cursor: pointer;
+        }
+    }
+}
+
+@media (max-width: 780px) {
+    .start-label-box{
+        img{
+            width: 70vw;
         }
     }
 }

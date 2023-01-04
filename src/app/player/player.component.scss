@@ -22,3 +22,18 @@
 .player-active{
     background-color: orange !important;
 }
+
+@media(max-width: 800px){
+    .player{
+        padding: 4px;
+
+        span{
+            font-size: 24px;
+            margin: 8px;
+        }
+
+        img{
+            height: 32px;
+        }
+    }
+}

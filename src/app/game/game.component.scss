@@ -7,6 +7,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    box-sizing: border-box;
 }
 
 .card-stack{
@@ -68,4 +69,58 @@
     bottom: 32px;
     right: 20%;
     left: 20%;
+}
+
+.players-container{
+    position: absolute;
+    right: 0;
+    height: 500px;
+}
+
+@media(max-width: 1200px){
+    .field{
+        justify-content: unset;
+        padding-left: 30%;
+    }
+
+    .pin-bottom{
+        left: 10%;
+        right: 10%;
+    }
+
+    .button-add{
+        top: 32px;
+        bottom: unset;
+    }
+}
+
+@media (max-width: 600px){
+    .field{
+        justify-content: center;
+        padding: 0;
+    }
+
+    .pick-card{
+        animation: pick-card-animation-small 1.2s ease-in-out;
+        transform: scale(1.3) translateX(14px) translateY(-180px) rotate(-10deg);
+    }
+    
+    .played-card{
+        transform: scale(1.3) translateX(14px) translateY(-180px) rotate(-10deg);
+    }
+
+    @keyframes pick-card-animation-small {
+        0%{
+            transform: scale(1);
+        }
+        40%{
+            transform: scale(1.3);
+        }
+        60%{
+            transform: scale(1.3);
+        }
+        100%{
+            transform: scale(1.3) translateX(14px) translateY(-180px) rotate(-10deg);
+        }
+    }
 }

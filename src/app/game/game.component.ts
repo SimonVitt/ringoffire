@@ -12,15 +12,17 @@ import { DialogAddPlayerComponent } from '../dialog-add-player/dialog-add-player
 export class GameComponent {
   pickCardAnimation = false;
   currentCard: string = '';
+  marginBetweenPlayers: number;
   game: Game;
 
   constructor(public dialog: MatDialog) {
     this.game = new Game();
+    if(document.body.offsetWidth < 800){
+      this.marginBetweenPlayers = 50;
+    }else{
+      this.marginBetweenPlayers = 90;
+    }
   }
-
-  /*ngOnInit(){
-    this.newGame();
-  }*/
 
   takeCard() {
     if (!this.pickCardAnimation) {
