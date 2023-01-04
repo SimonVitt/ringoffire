@@ -1,7 +1,21 @@
+<app-player *ngFor="let player of game.players; let i = index" [ngStyle]="{'top.px': i * 90 + 150}" [name]="player" [playerActive]="i == game.currentPlayer"
+    class="player-position"></app-player>
 <div class="field">
     <div class="card-stack">
-        <img *ngFor="let c of [0,1,2,3]; let i = index" [ngStyle]="{'right.px': i * 5}" src="assets/img/cards/card_cover.png">
+        <!-- card stack -->
+        <img *ngFor="let c of [0,1,2,3]; let i = index" [ngStyle]="{'right.px': i * 5}"
+            src="assets/img/cards/card_cover.png">
         <img (click)="takeCard()" class="top-card" style="right: 20px;" src="assets/img/cards/card_cover.png">
-        <img (click)="takeCard()" *ngIf="pickCardAnimation" class="pick-card" style="right: 20px;" src="assets/img/cards/ace_1.png">
+        <!-- stack for played card -->
+        <img *ngFor="let card of game.playedCards" class="played-card" style="right: 20px;"
+            src="assets/img/cards/{{ card }}.png">
+
+        <!-- currentcard animation -->
+        <img *ngIf="pickCardAnimation" class="pick-card" style="right: 20px;"
+            src="assets/img/cards/{{ currentCard }}.png">
     </div>
 </div>
+<button mat-fab (click)="openDialog()" color="primary" class="button-add">
+    <mat-icon>add</mat-icon>
+</button>
+<app-game-info class="pin-bottom" [card]="currentCard"></app-game-info>
