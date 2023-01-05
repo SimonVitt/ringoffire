@@ -1,6 +1,6 @@
 <h1 mat-dialog-title>Edit player</h1>
 <div mat-dialog-content class="img-container">
-  <img class="profile-pic" [mat-dialog-close]="image" *ngFor="let image of allProfilePictures" src="/assets/img/profiles/{{ image }}">
+  <img class="profile-pic" [mat-dialog-close]="image" *ngFor="let image of allProfilePictures" src="assets/img/profiles/{{ image }}">
 </div>
 <div mat-dialog-actions>
     <button mat-button (click)="onNoClick()">No Thanks</button>

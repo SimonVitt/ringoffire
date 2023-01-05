@@ -19,7 +19,6 @@ export class DialogGameoverComponent {
     let game = new Game();
     this.coll = collection(this.firestore, 'games');
     let gameinfo = await addDoc(this.coll, game.toJson());
-    console.log(gameinfo.id);
     this.router.navigateByUrl('/game/' + gameinfo.id);
     this.dialogRef.close();
   }
