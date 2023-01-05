@@ -23,6 +23,8 @@ import { provideDatabase,getDatabase } from '@angular/fire/database';
 import { provideFirestore,getFirestore } from '@angular/fire/firestore';
 import { EditPlayerComponent } from './edit-player/edit-player.component';
 import { DialogGameoverComponent } from './dialog-gameover/dialog-gameover.component';
+import { HashLocationStrategy, LocationStrategy } from '@angular/common';
+import { DialogHelpComponent } from './dialog-help/dialog-help.component';
 
 
 
@@ -37,7 +39,8 @@ import { DialogGameoverComponent } from './dialog-gameover/dialog-gameover.compo
     DialogAddPlayerComponent,
     GameInfoComponent,
     EditPlayerComponent,
-    DialogGameoverComponent
+    DialogGameoverComponent,
+    DialogHelpComponent
   ],
   imports: [
     MatCardModule,
@@ -55,7 +58,7 @@ import { DialogGameoverComponent } from './dialog-gameover/dialog-gameover.compo
     provideDatabase(() => getDatabase()),
     provideFirestore(() => getFirestore())
   ],
-  providers: [],
+  providers: [{provide: LocationStrategy, useClass: HashLocationStrategy}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

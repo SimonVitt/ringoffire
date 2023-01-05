@@ -6,6 +6,7 @@ import { collection, collectionData, CollectionReference, doc, docData, Document
 import { ActivatedRoute } from '@angular/router';
 import { EditPlayerComponent } from '../edit-player/edit-player.component';
 import { DialogGameoverComponent } from '../dialog-gameover/dialog-gameover.component';
+import { DialogHelpComponent } from '../dialog-help/dialog-help.component';
 
 
 
@@ -114,6 +115,10 @@ export class GameComponent implements OnInit {
         this.saveGame();
       }
     });
+  }
+
+  openDialogQuestion(){
+    this.dialog.open(DialogHelpComponent);
   }
 
   async saveGame() {
