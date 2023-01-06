@@ -133,6 +133,16 @@
 }
 
 @media (max-width: 600px){
+    .button-add{
+        top: 12px;
+        right: 12px;
+    }
+
+    .button-question{
+        top: 12px;
+        left: 12px;
+    }
+
     .field{
         justify-content: center;
         padding: -1;
@@ -149,9 +159,11 @@
 
     .players-container{
         width: 140px;
+        height: 300px;
     }
 
     .pin-bottom{
+        position: fixed;
         left: 0;
         right: 0;
         bottom: 0;
