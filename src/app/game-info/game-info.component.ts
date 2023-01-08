@@ -15,7 +15,7 @@ export class GameInfoComponent {
     { title: 'Me', description: 'Congrats! Drink a shot!' },
     { title: 'Category', description: 'Come up with a category (e.g. Colors). Each player must enumerate one item from the category.' },
     { title: 'Bust a jive', description: 'Player 1 makes a dance move. Player 2 repeats the dance move and adds a second one. ' },
-    { title: 'Chicks', description: 'All girls drink.' },
+    { title: 'Girls', description: 'All girls drink.' },
     { title: 'Heaven', description: 'Put your hands up! The last player drinks!' },
     { title: 'Mate', description: 'Pick a mate. Your mate must always drink when you drink and the other way around.' },
     { title: 'Thumbmaster', description: 'Coose between truth and dare. The person to your right asks you a question or dares you to something then!' },
