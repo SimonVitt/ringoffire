@@ -1,4 +1,4 @@
-<div class="players-container" [ngStyle]="{'top.px': 150}">
+<div class="players-container">
     <app-player *ngFor="let player of game.players; let i = index"
         [ngStyle]="{'top.px': i * marginBetweenPlayers}" [name]="player" [image]="game.player_images[i]"
         [playerActive]="i == game.currentPlayer" class="player-position"

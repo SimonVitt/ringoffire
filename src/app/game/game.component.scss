@@ -31,12 +31,14 @@
     position: absolute;
     right: 32px;
     bottom: 32px;
+    z-index: 2;
 }
 
 .button-question{
     position: absolute;
     left: 32px;
     top: 32px;
+    z-index: 2;
 }
 
 .pick-card{
@@ -78,8 +80,9 @@
 
 .players-container{
     position: absolute;
+    top:20%;
     right: 0;
-    height: 500px;
+    height: 366px;
     width: 260px;
     overflow-y: scroll;
     z-index: 1;
