@@ -89,7 +89,7 @@
   /* Firefox */
   .players-container {
     scrollbar-width: auto;
-    scrollbar-color: #5487a0 #ffffff;
+    scrollbar-color: #5487a0 rgb(57, 34, 29);
   }
 
   /* Chrome, Edge, and Safari */
@@ -98,7 +98,7 @@
   }
 
   .players-container::-webkit-scrollbar-track {
-    background: #ffffff;
+    background: rgb(57, 34, 29);
   }
 
   .players-container::-webkit-scrollbar-thumb {
